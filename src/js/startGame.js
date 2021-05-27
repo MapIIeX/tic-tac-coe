@@ -37,7 +37,7 @@ export default (option) => {
         const firstPlayerName = document.getElementById('firstPlayerName').value.trim();
         const secondPlayerName = document.getElementById('secondPlayerName').value.trim();
         if (firstPlayerName && secondPlayerName && firstPlayerName !== secondPlayerName &&
-            firstPlayerName < 30 && secondPlayerName < 30) {
+            firstPlayerName.length < 30 && secondPlayerName.length < 30) {
             const player1 = new Player(firstPlayerName, 'X');
             const player2 = new Player(secondPlayerName, 'O');
             launchGame(player1, player2)
