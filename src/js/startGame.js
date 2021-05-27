@@ -34,9 +34,9 @@ export default (option) => {
             }
         }
     } else if (option === 'two') {
-        const firstPlayerName = document.getElementById('firstPlayerName').value;
-        const secondPlayerName = document.getElementById('secondPlayerName').value;
-        if (firstPlayerName.trim() && secondPlayerName.trim()) {
+        const firstPlayerName = document.getElementById('firstPlayerName').value.trim();
+        const secondPlayerName = document.getElementById('secondPlayerName').value.trim();
+        if (firstPlayerName && secondPlayerName && firstPlayerName !== secondPlayerName) {
             const player1 = new Player(firstPlayerName, 'X');
             const player2 = new Player(secondPlayerName, 'O');
             launchGame(player1, player2)
