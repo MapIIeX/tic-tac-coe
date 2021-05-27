@@ -23,8 +23,9 @@ function launchGame(player1, player2) {
 
 export default (option) => {
     if (option === 'single') {
-        const playerNameSingle = document.getElementById('playerNameSingle').value;
-        if (playerNameSingle.trim()) {
+        const playerNameSingle = document.getElementById('playerNameSingle').value.trim();
+        if (playerNameSingle && playerNameSingle.length < 30 && 
+            !Bot.names.some(name => name === playerNameSingle)) {
             const player = new Player(playerNameSingle, 'X');
             const bot = new Bot('O');
             launchGame(player, bot);
