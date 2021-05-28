@@ -71,10 +71,6 @@ module.exports = (env) => {
                     use: cssLoaders('sass-loader')
                 },
                 {
-                    test: /\.less/,
-                    use: cssLoaders('less-loader')
-                },
-                {
                     test: /\.js$/,
                     exclude: /node_modules/,
                     use: jsLoaders()
